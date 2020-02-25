@@ -43,7 +43,8 @@ _/\      _
    \    /
     \/\/
 He enters and leaves one valley.
-@author: gudek
+
+@author: Jivitesh Gudekar
 """
 # Complete the countingValleys function below.
 def countingValleys(n, s):
