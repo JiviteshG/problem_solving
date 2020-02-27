@@ -79,7 +79,6 @@ The hourglass with the maximum sum () is:
 
 @author: Jivitesh Gudekar
 
-[UNDER IMPLEMENTATION]
 """
 
 f = [[1,1,1],[0,1,0],[1,1,1]]
@@ -90,31 +89,11 @@ ds =[[1, 1, 1, 0, 0, 0],
      [0, 0, 2, 4, 4, 0],
      [0, 0, 0, 2, 0, 0],
      [0, 0, 1, 2, 4, 0]]
-#
-#r = [[0 for i in range(len(f))] for j in range(len(a))]
-#x = 0
-#arr = []
-#
-#for k in range(len(ds)-2):
-#    for i in range(len(a)):
-#        for j in range(len(f)):
-#            
-#            r[i][j] = f[i][j] * ds[i][j]
-#            print(i,j, ds[i][j])
-#    
-#    print((arr))
-#    
-#    arr.append(sum(sum(r,[])))
-#    print((arr))
 
-
+arr = []
 
 for i in range(len(ds)-2):
     for j in range(len(ds)-2):
-        for k in range(3):
-            for l in range(3):
-                print(ds[k][l])
-#        r[i][j] = f[i][j] * ds[i][j]
-        
-        print()
-    print("--------")
+        arr.append(ds[i][j] + ds[i][j+1]+ ds[i][j+2]+ ds[i+1][j+1]+ ds[i+2][j]+ ds[i+2][j+1]+ ds[i+2][j+2])
+
+print(max(arr))
